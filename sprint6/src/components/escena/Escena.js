@@ -15,7 +15,7 @@ const Escena = ({ frase, changeColor }) => {
     return (
 
         <div>
-            <Frame className={changeColor ? 'changeColor' : ''}>
+            <Frame className={changeColor ? 'changeColor' : 'originaColor'}>
                 <p>{frase}</p>
             </Frame>
         </div>

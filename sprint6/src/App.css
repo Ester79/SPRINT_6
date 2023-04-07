@@ -16,8 +16,18 @@ button {
   cursor: pointer;
 }
 
+button:hover {
+  background: red;
+  color: white;
+}
+
 .changeColor {
-  background-color: pink;
+  background-color: salmon;
+}
+
+.originaColor {
+  background-color: rgb(239, 232, 232);
+  opacity: 0.8;
 }
 
 .mainPage {
@@ -49,4 +59,8 @@ button {
 .startButton:hover {
   background-color: yellow;
   color: black;
+}
+
+.game {
+  height: 600px;
 }
