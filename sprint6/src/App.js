@@ -6,6 +6,8 @@ import Escena from './components/escena/Escena';
 function App() {
 
   const [count, setCount] = useState(0);
+  const [hiddeGame, setHiddeGame] = useState(true)
+  const [hiddeMainPage, setHiddeMainPage] = useState(true)
 
   const next = () => {
     if (count === dataFrases.length - 1) {
@@ -23,15 +25,27 @@ function App() {
     }
   };
 
-  return (
-    <div>
-      <div className='botones'>
-        <button onClick={previous}>Anterior</button>
-        <button onClick={next}>Següent</button>
-      </div>
-      {dataFrases.map((data, index) => (<Escena key={data} frase={data} changeColor={index === count}></Escena>))}
+  const hiddeDisplayElements = () => {
+    setHiddeGame(!hiddeGame);
+    setHiddeMainPage(!hiddeMainPage)
+  }
 
-    </div>
+  return (
+    <>
+      {hiddeMainPage &&
+        <div className='mainPage'>
+          <p>Un/a client/a que té com a producte principal una web de gestió empresarial desenvolupada amb React. Ens ha demanat que desenvolupem un tutorial, en el qual mitjançant dos botons els nous usuaris puguin avançar i retrocedir en els consells, modificant-se el text d'ajuda i la imatge de fons.</p>
+          <button onClick={hiddeDisplayElements} className='startButton'>START</button>
+        </div>}
+      {!hiddeGame &&
+        <div>
+          <div className='botones'>
+            <button onClick={previous}>Anterior</button>
+            <button onClick={next}>Següent</button>
+          </div>
+          {dataFrases.map((data, index) => (<Escena key={data} frase={data} changeColor={index === count}></Escena>))}
+        </div>}
+    </>
   );
 }
 

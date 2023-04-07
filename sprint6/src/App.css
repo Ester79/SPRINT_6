@@ -13,8 +13,40 @@ button {
   width: 50%;
   height: 60px;
   border: 1px solid black;
+  cursor: pointer;
 }
 
 .changeColor {
   background-color: pink;
+}
+
+.mainPage {
+  background-color: rgb(101, 28, 238);
+  margin: auto;
+  border-radius: 30px;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  color: white;
+  font-size: 20px;
+  height: 550px;
+  align-items: center;
+  border: 5px solid black;
+}
+
+.startButton {
+  width: 15%;
+  border-radius: 30px;
+  background-color: black;
+  color: white;
+  font-size: 40px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 60px;
+}
+
+.startButton:hover {
+  background-color: yellow;
+  color: black;
 }
