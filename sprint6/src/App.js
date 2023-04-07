@@ -1,15 +1,14 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import './App.css';
+import dataFrases from './data/dataFrases.json';
 import Escena from './components/escena/Escena';
-import dataFrases from './data/dataFrases.json'
 
 function App() {
-
-
   return (
-    <>
-      {dataFrases.map(data => (<Escena frase={data}></Escena>))}
-    </>
+    <div>
+      {dataFrases.map(data => (<Escena key={data} frase={data}></Escena>))}
+
+    </div>
   );
 }
 
