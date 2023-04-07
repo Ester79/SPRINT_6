@@ -11,11 +11,11 @@ border:1px solid black;
 `;
 
 
-const Escena = ({ frase }) => {
+const Escena = ({ frase, changeColor }) => {
     return (
 
         <div>
-            <Frame>
+            <Frame className={changeColor ? 'changeColor' : ''}>
                 <p>{frase}</p>
             </Frame>
         </div>

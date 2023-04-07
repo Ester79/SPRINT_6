@@ -1,3 +1,20 @@
 * {
   margin: 10px;
 }
+
+.botones {
+  display: flex;
+  justify-content: center;
+}
+
+button {
+  border: none;
+  background-color: lightgray;
+  width: 50%;
+  height: 60px;
+  border: 1px solid black;
+}
+
+.changeColor {
+  background-color: pink;
+}
