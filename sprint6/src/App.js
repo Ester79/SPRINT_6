@@ -1,12 +1,14 @@
-import logo from './logo.svg';
+import React, { useEffect, useState } from 'react';
 import './App.css';
 import Escena from './components/escena/Escena';
+import dataFrases from './data/dataFrases.json'
 
 function App() {
+
+
   return (
     <>
-      <Escena></Escena>
-
+      {dataFrases.map(data => (<Escena frase={data}></Escena>))}
     </>
   );
 }
